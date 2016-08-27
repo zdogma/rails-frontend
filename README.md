@@ -1,11 +1,8 @@
-RTC Server
+Rails Frontend
 ===
 
 ## Description
-
-## Requirement
-
-## Install
+rails + babel + es6 + react + webpack で開発するための環境。
 
 ## Contribution
 1. Fork it ( https://github.com/zdogma/rtc-server/fork )
