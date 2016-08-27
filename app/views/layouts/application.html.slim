@@ -2,9 +2,9 @@ doctype html
 html
   head
     title
-      | RtcServer
+      | Title
     = csrf_meta_tags
-    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = stylesheet_link_tag 'pc/application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag_if_exists "pc/#{controller_name}/#{action_name}.js", 'data-turbolinks-track': 'reload'
   body
     = yield

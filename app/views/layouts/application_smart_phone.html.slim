@@ -1,0 +1,10 @@
+doctype html
+html
+  head
+    title
+      | Title
+    = csrf_meta_tags
+    = stylesheet_link_tag 'sp/application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag_if_exists "sp/#{controller_name}/#{action_name}.js", 'data-turbolinks-track': 'reload'
+  body
+    = yield
