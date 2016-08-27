@@ -1,5 +1,5 @@
 {
-  "name": "rtc-server",
+  "name": "sample",
   "version": "1.0.0",
   "description": "Web RTC Server",
   "main": "main.js",
@@ -23,16 +23,15 @@
     "webpack": "^1.13.2"
   },
   "scripts": {
-    "release": "webpack --config config/production/webpack.config.js",
-    "build": "webpack --config config/development/webpack.config.js",
-    "watch": "webpack --watch --config config/development/webpack.config.js"
+    "build": "webpack --config config/webpack.config.js",
+    "watch": "webpack --watch --config config/webpack.config.js"
   },
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/zdogma/rtc-server.git"
   },
   "keywords": [
-    "rtc"
+    ""
   ],
   "author": "zdogma",
   "license": "ISC",

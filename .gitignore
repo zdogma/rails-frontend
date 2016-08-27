@@ -16,7 +16,7 @@ pickle-email-*.html
 /frontend/node_modules/
 !/app/assets/javascripts/.keep
 /app/assets/javascripts/*.js
-/npm-debug.log
+/frontend/npm-debug.log
 
 # TODO Comment out these rules if you are OK with secrets being uploaded to the repo
 config/initializers/secret_token.rb
