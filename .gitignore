@@ -13,7 +13,7 @@ capybara-*.html
 **.orig
 rerun.txt
 pickle-email-*.html
-/frontend/node_modules/
+node_modules/
 !/app/assets/javascripts/pc/.keep
 !/app/assets/javascripts/sp/.keep
 /app/assets/javascripts/**/*.js

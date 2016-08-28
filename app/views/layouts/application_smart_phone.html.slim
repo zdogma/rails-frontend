@@ -3,8 +3,13 @@ html
   head
     title
       | Title
+
     = csrf_meta_tags
     = stylesheet_link_tag 'sp/application', media: 'all', 'data-turbolinks-track': 'reload'
-    = javascript_include_tag_if_exists "sp/#{controller_name}/#{action_name}.js", 'data-turbolinks-track': 'reload'
+    = javascript_include_tag "common", 'data-turbolinks-track': 'reload'
+
   body
     = yield
+
+  / React の Component Render の際に Target となる DOM がすでに存在している必要があるので、最後に読み込む
+  = javascript_include_tag_if_exists "sp/#{controller_name}/#{action_name}.js", 'data-turbolinks-track': 'reload'
