@@ -16,6 +16,7 @@ gem 'settingslogic'
 
 group :development, :test do
   gem 'byebug', platform: :mri
+  gem 'rspec-rails'
 end
 
 group :development do
