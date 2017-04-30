@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative 'boot'
 
 require 'rails/all'
@@ -9,6 +11,8 @@ Dotenv::Railtie.load
 
 module RtcServer
   class Application < Rails::Application
+    require Rails.root.join('config', 'service_settings')
+
     config.generators.template_engine = :slim
   end
 end

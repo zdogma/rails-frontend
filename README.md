@@ -4,6 +4,19 @@ Rails Frontend
 ## Description
 rails + babel + es6 + react + webpack で開発するための環境。
 
+## Install
+```
+cd frontend/
+npm install
+npm run build
+```
+
+## Development
+```
+bundle exec guard
+npm run watch
+```
+
 ## Contribution
 1. Fork it ( https://github.com/zdogma/rails-frontend/fork )
 2. Create your feature branch (git checkout -b my-new-feature)

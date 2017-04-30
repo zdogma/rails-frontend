@@ -1,0 +1,61 @@
+AllCops:
+  TargetRubyVersion: 2.4
+  DisplayCopNames: true
+  Exclude:
+    - 'db/migrate/*'
+    - 'db/schema.rb'
+    - 'db/seeds.rb'
+    - 'db/seeds/**/*'
+    - 'vendor/**/*'
+    - 'config/initializers/secret_token.rb'
+    - 'config/deploy.rb'
+    - 'config/routes.rb'
+    - 'config/environments/*'
+Rails:
+  Enabled: true
+
+GlobalVars:
+  AllowedVariables: [$logger]
+
+Metrics/LineLength:
+  Max: 90
+  Exclude:
+    - config/application.rb
+
+Metrics/MethodLength:
+  Max: 30
+
+Style/AsciiComments:
+  Enabled: false
+
+Style/BlockDelimiters:
+  EnforcedStyle: braces_for_chaining
+  Exclude:
+    - spec/**/*_spec.rb
+    - spec/factories/*.rb
+
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+Style/ConditionalAssignment:
+  AutoCorrect: false
+
+Style/Documentation:
+  Enabled: false
+
+Style/Lambda:
+  EnforcedStyle: literal
+
+Style/NumericLiterals:
+  Enabled: false
+
+Style/SignalException:
+  EnforcedStyle: only_raise
+
+Style/SpaceInsideBlockBraces:
+  EnforcedStyle: space
+  EnforcedStyleForEmptyBraces: no_space
+  SpaceBeforeBlockParameters: false
+
+Style/StringLiterals:
+ Enabled: false

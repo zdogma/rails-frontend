@@ -1,4 +1,5 @@
+# frozen_string_literal: true
+
 class SiteController < ApplicationController
-  def top
-  end
+  def top; end
 end

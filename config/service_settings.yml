@@ -1,0 +1,15 @@
+# config/service_settings.yml
+defaults: &defaults
+  database:
+    name: <%= ENV.fetch 'XXX_DATABASE_NAME' %>
+    host: <%= ENV.fetch 'XXX_DATABASE_HOST' %>
+    username: <%= ENV.fetch 'XXX_DATABASE_USERNAME' %>
+    password: <%= ENV.fetch 'XXX_DATABASE_PASSWORD' %>
+development:
+  <<: *defaults
+
+test:
+  <<: *defaults
+
+production:
+  <<: *defaults

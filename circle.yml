@@ -1,0 +1,16 @@
+machine:
+  timezone:
+    Asia/Tokyo
+  ruby:
+    version: 2.4.0
+test:
+  pre:
+    - bundle exec rubocop -r $(bundle show rubocop-junit-formatter)/lib/rubocop/formatter/junit_formatter.rb -c .rubocop.yml --format RuboCop::Formatter::JUnitFormatter --fail-level C --out $CIRCLE_TEST_REPORTS/rubocop/rubocop.xml
+    - bundle exec brakeman --exit-on-warn -o $CIRCLE_ARTIFACTS/brakeman.html
+dependencies:
+  pre:
+    - echo '[mysqld]' | sudo sh -c 'cat >>  /etc/mysql/my.cnf'
+    - echo 'innodb_file_format=Barracuda' | sudo sh -c 'cat >>  /etc/mysql/my.cnf'
+    - echo 'innodb_file_per_table=1' | sudo sh -c 'cat >>  /etc/mysql/my.cnf'
+    - echo 'innodb_large_prefix=1' | sudo sh -c 'cat >>  /etc/mysql/my.cnf'
+    - sudo service mysql restart
