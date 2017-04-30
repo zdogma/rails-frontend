@@ -1,7 +1,5 @@
 # config/application.yml
 defaults: &defaults
-  peer_api_key: <%= ENV['PEER_API_KEY'] %>
-
 development:
   <<: *defaults
 
